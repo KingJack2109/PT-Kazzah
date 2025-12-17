@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kairen Store - Partner Kazzah Official</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+
+body{
+  background:radial-gradient(circle at top,#020b14,#000);
+  color:#eaeaea;
+  padding-top:70px;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:60px;
+  background:rgba(0,0,0,.85);
+  backdrop-filter:blur(10px);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 16px;
+  z-index:999;
+  border-bottom:1px solid rgba(0,234,255,.2);
+}
+.nav-left{display:flex;align-items:center;gap:10px}
+.logo-mini{
+  width:34px;height:34px;border-radius:50%;
+  background:linear-gradient(135deg,#00eaff,#00c3ff);
+  color:#000;font-weight:bold;
+  display:flex;align-items:center;justify-content:center;
+}
+.brand{font-weight:600}
+.nav-right{position:relative}
+.icon-btn{
+  background:none;border:none;
+  color:#00eaff;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* ===== BUBBLE CHAT ===== */
+.menu-bubble{
+  position:absolute;
+  top:58px;
+  right:0;
+  background:#00eaff;
+  color:#000;
+  padding:8px 12px;
+  border-radius:12px;
+  font-size:12px;
+  font-weight:600;
+  white-space:nowrap;
+  box-shadow:0 8px 20px rgba(0,234,255,.4);
+  animation:bubbleFloat 1.8s infinite;
+}
+.menu-bubble::after{
+  content:'';
+  position:absolute;
+  top:-6px;
+  right:14px;
+  border-left:6px solid transparent;
+  border-right:6px solid transparent;
+  border-bottom:6px solid #00eaff;
+}
+@keyframes bubbleFloat{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-4px)}
+  100%{transform:translateY(0)}
+}
+
+/* ===== SIDE MENU ===== */
+.side-menu{
+  position:fixed;
+  top:60px;right:-220px;
+  width:200px;height:100%;
+  background:#050b12;
+  padding:20px;
+  transition:.3s;
+  z-index:998;
+}
+.side-menu a{
+  display:block;
+  margin-bottom:15px;
+  color:#00eaff;
+  text-decoration:none;
+}
+.side-menu.active{right:0}
+
+/* ===== HEADER ===== */
+.header{text-align:center;padding:35px 16px 20px}
+.header h1{color:#00eaff;letter-spacing:2px}
+.header p{margin-top:8px;color:#b5c6d6;font-size:14px}
+
+/* ===== PARTNER ===== */
+.partner-section{padding:10px 20px}
+.partner-card{
+  border:1px solid rgba(0,234,255,.25);
+  border-radius:16px;
+  padding:20px;
+  text-align:center;
+}
+.partner-logo{
+  width:100px;height:100px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid #00eaff;
+  box-shadow:0 0 20px rgba(0,234,255,.6);
+  margin-bottom:12px;
+}
+.partner-name{
+  color:#00eaff;
+  font-weight:bold;
+  letter-spacing:2px;
+  margin-bottom:6px;
+}
+
+/* ===== PRODUK ===== */
+.section{padding:10px 20px}
+.section-title{
+  margin:20px 0 10px;
+  padding:12px;
+  text-align:center;
+  border:1px solid rgba(0,234,255,.3);
+  border-radius:12px;
+  color:#00eaff;
+}
+.produk{text-align:center;line-height:2;color:#d9e6f2}
+
+/* ===== FOOTER GRID ===== */
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  padding:20px;
+  margin-top:20px;
+}
+.footer-grid a{
+  text-align:center;
+  padding:14px;
+  border-radius:12px;
+  border:1px solid rgba(0,234,255,.3);
+  color:#00eaff;
+  text-decoration:none;
+}
+@media(max-width:600px){
+  .footer-grid{grid-template-columns:1fr}
+}
+
+/* ===== SCROLL EFFECT ===== */
+.reveal{
+  opacity:0;
+  transform:translateY(30px);
+  transition:.6s;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-left">
+    <div class="logo-mini">PT</div>
+    <span class="brand">Partner Kazzah Official</span>
+  </div>
+  <div class="nav-right">
+    <button id="menuToggle" class="icon-btn">☰</button>
+    <div class="menu-bubble" id="menuBubble">List Partner Kazzah</div>
+  </div>
+</header>
+
+<nav id="sideMenu" class="side-menu">
+  <a href="index.html">Home</a>
+  <a href="kairen.html">Kairen Store</a>
+  <a href="bluemart.html">Bluemart Store</a>
+  <a href="zhidan.html">Rizhuyoka Official</a>
+  <a href="faltrex.html">Faltrex Official</a>
+  <a href="eli.html">Elizanya Store</a>
+</nav>
+
+<!-- HEADER -->
+<section class="header reveal">
+  <h1>BLUEMART STORE</h1>
+  <p>Partner Resmi Kazzah Official</p>
+</section>
+
+<!-- PARTNER INFO -->
+<section class="partner-section reveal">
+  <div class="partner-card">
+    <img src="https://raw.githubusercontent.com/obet24077/dat1/main/uploads/a9d8d5-1765930795012.jpg" class="partner-logo">
+    <div class="partner-name">BLUEMART STORE</div>
+    <p>Membeli bukan hanya tentang menerima barang dari pedagang, tapi juga tentang kepuasan pelanggan.</p>
+    <br>
+    <p>©Bluemart Store BY Izad</p>
+  </div>
+</section>
+
+<!-- PRODUK -->
+<section class="section">
+  <div class="section-title reveal">List Produk Bluemart</div>
+  <div class="produk reveal">
+    Sewa Bot<br>
+    Apk Premium<br>
+    Preflix<br>
+    freelance<br>
+    top up game<br>
+    kebutuhan sosmed
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section class="footer-grid reveal">
+  <a href="https://wa.me/6285753750859" target="_blank">WhatsApp Owner</a>
+  <a href="https://chat.whatsapp.com/JIMgmux0dM9EXBJgRzyN7g" target="_blank">Group Store</a>
+  <a href="https://whatsapp.com/channel/0029VbBGJhrKWEKkem0lvv27" target="_blank">Channel Testimoni</a>
+</section>
+
+<script>
+/* MENU + BUBBLE */
+const menuBtn=document.getElementById('menuToggle');
+const sideMenu=document.getElementById('sideMenu');
+const bubble=document.getElementById('menuBubble');
+
+menuBtn.onclick=()=>{
+  const open=sideMenu.classList.toggle('active');
+  bubble.style.display=open?'none':'block';
+};
+
+/* SCROLL */
+const reveals=document.querySelectorAll('.reveal');
+function revealOnScroll(){
+  reveals.forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight-80){
+      el.classList.add('active');
+    }
+  });
+}
+window.addEventListener('scroll',revealOnScroll);
+revealOnScroll();
+</script>
+
+</body>
+</html>
